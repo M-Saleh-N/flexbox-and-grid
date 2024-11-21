@@ -3,8 +3,44 @@
     padding: 0;
     
 }
-
+body{
+    background-color: #fdf4dc;
+}
 .big-con{
     display: flex;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 8px;
+    justify-content: space-around;
+
+}
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6 {
+    border: 1px solid #000000; 
+    border-radius: 8px; /* rounds the corners */
+    padding: 10px; /* Padding inside each grid item */
+    text-align: center; /* Centers the text */
+}
+
+h3 {
+    margin: 10px 0; /*  headings */
+}
+
+img {
+    max-width: 100%; /* Ensures images are responsive */
+    height: auto; 
+}
+/* responsiveness  */
+@media (max-width: 768px) {
+    .big-con {
+        justify-content: center; /* Centers items in smaller screens */
+    }
     
+}
+
+@media (max-width: 480px) {
+    .big-con {
+        flex-direction: column; /* Stacks items vertically on very small screens */
+        align-items: center; /* Centers items */
+    }
 }
